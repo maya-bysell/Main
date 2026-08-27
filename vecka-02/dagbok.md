@@ -61,4 +61,5 @@ FYSISK
 
 En switch arbetar på lager 2.
 
+
 Skrivit sammanfattning av kapitlet och sammanfattning av krabba.
