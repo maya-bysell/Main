@@ -30,3 +30,33 @@ Går länken ner slänger switchen sina anteckningar om den porten på en gång.
 Aging gäller enheter som tystnar på en port som fortfarande är uppe.
 
 ------
+***Dag 2***
+Svarar på kontrollfrågor och läser in fördjupning.
+Har fastnat på kontrollfråga 2.12. Jag vet vilken port som fungerar sämre, men jag vet inte vad jag bör kontrollera härnäst. Kanske samma problem som jag hade tidigare, rad 17(?)
+
+Svar på återblick
+
+2.14: 
+De tre lägena som finns på en Cisco-switch är
+> = som visar att du är i användarläge
+# = som visar att du är i privilegierat läge
+(config)# = som visar att du är i konfigurationsläge
+
+2.15: 
+Din konfiguration försvinner om du stänger av switchen utan att spara.
+Kommandot för att spara är 
+copy running-config startup-config
+eller
+write memory , förkortat wr
+
+2.16: 
+De sju OSI-lagerna är
+APPLIKATION
+PRESENTATION
+SESSION
+TRANSPORT
+NÄTVERK
+DATALINK
+FYSISK
+
+En switch arbetar på lager 2.
