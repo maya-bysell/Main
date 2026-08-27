@@ -1,0 +1,184 @@
+Övning i CPT = resultat i CLI eller command prompt
+
+C:\>ipconfig /all
+
+FastEthernet0 Connection:(default port)
+
+   Connection-specific DNS Suffix..: 
+   Physical Address................: 0001.96E7.133D
+   Link-local IPv6 Address.........: FE80::201:96FF:FEE7:133D
+   IPv6 Address....................: ::
+   Autoconfiguration IP Address....: 169.254.19.61
+   Subnet Mask.....................: 255.255.0.0
+   Default Gateway.................: ::
+                                     0.0.0.0
+   DHCP Servers....................: 0.0.0.0
+   DHCPv6 IAID.....................: 
+   DHCPv6 Client DUID..............: 00-01-00-01-42-E0-85-0E-00-01-96-E7-13-3D
+   DNS Servers.....................: ::
+                                     0.0.0.0
+
+------
+#gjorde om det igen men får inte till det med att sätta ip-adressen i command prompt(?) minns inte hur man skulle göra,
+så jag satte ip, subnet och gateway och bara skrev någonting i IP configuration, men jag vet inte om det är rätt.
+Men nu får jag fram resultat på alla tre ovan iallafall.
+------
+
+C:\>ipconfig /all
+
+FastEthernet0 Connection:(default port)
+
+   Connection-specific DNS Suffix..: 
+   Physical Address................: 0001.96E7.133D
+   Link-local IPv6 Address.........: FE80::201:96FF:FEE7:133D
+   IPv6 Address....................: ::
+   IPv4 Address....................: 192.168.1.2
+   Subnet Mask.....................: 255.255.255.0
+   Default Gateway.................: ::
+                                     192.168.1.1
+   DHCP Servers....................: 0.0.0.0
+   DHCPv6 IAID.....................: 
+   DHCPv6 Client DUID..............: 00-01-00-01-42-E0-85-0E-00-01-96-E7-13-3D
+   DNS Servers.....................: ::
+                                     0.0.0.0
+
+------
+
+Switch> show mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+
+   1    0001.96e7.133d    DYNAMIC     Fa0/2
+   1    0002.171b.b601    DYNAMIC     Fa0/1
+Switch>
+
+------
+
+Switch>show interfaces status
+Port      Name               Status       Vlan       Duplex  Speed Type
+Fa0/1                        connected    1          a-full  a-100 10/100BaseTX
+Fa0/2                        connected    1          a-full  a-100 10/100BaseTX
+Fa0/3                        notconnect   1          auto    auto  10/100BaseTX
+
+------
+
+Gör det själv-uppgift
+
+------
+
+
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ipconfig /all
+
+FastEthernet0 Connection:(default port)
+
+   Connection-specific DNS Suffix..: 
+   Physical Address................: 0040.0B68.B96D
+
+
+------
+C:\>ping 192.168.1.1
+
+Pinging 192.168.1.1 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 192.168.1.1:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+    
+------
+
+Switch#show mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+
+   1    0040.0b68.b96d    DYNAMIC     Fa0/1
+Switch#
+
+------
+
+Switch#show interfaces status
+Port      Name               Status       Vlan       Duplex  Speed Type
+Fa0/1                        connected    1          a-full  a-100 10/100BaseTX
+Fa0/2                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/3                        notconnect   1          auto    auto  10/100BaseTX
+
+#Hastigheten är 100 istället för 1000
+------
+#Felet var att jag anslutit till Fastethernet istället för Gigabitethernet0/1.
+
+
+Switch>show interfaces status
+Port      Name               Status       Vlan       Duplex  Speed Type
+Fa0/1                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/2                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/3                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/4                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/5                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/6                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/7                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/8                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/9                        notconnect   1          auto    auto  10/100BaseTX
+Fa0/10                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/11                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/12                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/13                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/14                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/15                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/16                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/17                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/18                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/19                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/20                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/21                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/22                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/23                       notconnect   1          auto    auto  10/100BaseTX
+Fa0/24                       notconnect   1          auto    auto  10/100BaseTX
+Gig0/1                       connected    1          a-full  a-100 10/100/1000BaseTX
+Gig0/2                       notconnect   1          auto    auto  10/100/1000BaseTX
+
+#Nu bytte jag till ett Gigabit-kort i laptopen för den hade inte det innan, men det verkar inte fungera ändå
+,kan inte hitta en lösning, detta är vad jag fick fram.
+
+------
+
+Bytte port och ip address
+
+Switch>show mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+
+   1    0060.70c1.0aa1    DYNAMIC     Gig0/2
+Switch>
+
+------
+#drog ur kabeln och yes, den ligger kvar i minnet i 300 sekunder.
+
+------
+#stängde av nätverkskortet i laptopen, väntade fem minuter och kollade show mac address-table, och adressen var borta.
+Aging, wipe:as efter fem minuter om switchen inte fått någotr livstecken från laptopen.
+Går länken ner slänger switchen sina anteckningar om den porten på en gång. 
+Aging gäller enheter som tystnar på en port som fortfarande är uppe.
+
+------
+
+
+
+
+
+
+
+
