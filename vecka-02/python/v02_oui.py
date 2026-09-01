@@ -26,3 +26,5 @@ for address in addresses:
         name = "okänd tillverkare" 
 
     print(f"{address} -> {name}")
+
+<img width="833" height="924" alt="Image" src="https://github.com/user-attachments/assets/c8e262b7-e497-4cf4-abcb-3f4d6d64242d" />
