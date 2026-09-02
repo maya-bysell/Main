@@ -62,3 +62,8 @@ FYSISK
 En switch arbetar på lager 2.
 
 Skrivit sammanfattning av kapitlet och sammanfattning av krabba.
+
+
+***Dag 3***
+Vi har lite fler dagar på oss denna vecka så jag har satt upp ett dokument om hur jag gjorde steg för steg för att konfigurera en router och hur man ser en mac-tabell.
+Jag förstår inte hur vi ska göra felrapport eller en pull-request så det är det jag har kvar för denna vecka.
