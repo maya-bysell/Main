@@ -1,4 +1,6 @@
 ***Uppgift utförd i CPT***
+<img width="684" height="415" alt="image" src="https://github.com/user-attachments/assets/d7091d71-5f42-4b9c-9617-73044f21a22e" />
+
 
 192.168.1.164/26
 
