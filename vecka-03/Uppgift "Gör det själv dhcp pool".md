@@ -1,4 +1,4 @@
-***Uppgift utförd i CPT****
+***Uppgift utförd i CPT***
 
 192.168.1.164/26
 
@@ -6,10 +6,14 @@ Nätadress: 192.168.1.64
 Broadcastadress: 192.168.1.127
 Totalt adressintervall: 192.168.1.64 till 192.168.1.127
 Användbart adressintervall (för enheter): 192.168.1.65 till 192.168.1.126
-.
-.
-.
+
+-
+-
+-
+
 <img width="628" height="356" alt="Image" src="https://github.com/user-attachments/assets/9feeca30-6835-4b76-8baf-b751dbd6842d" />
+
+
 Router> enable
 Router# configure terminal
 Router(config)# interface gigabitEthernet 0/0
